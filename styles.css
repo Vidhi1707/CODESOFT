@@ -1,57 +1,37 @@
-/* General Styles */
+/* Simple styles for the calculator */
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 50px); /* 4 buttons per row */
+    gap: 10px; /* Space between buttons */
 }
 
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin: 0;
-}
-
-section {
-    padding: 20px;
-}
-
-#about img {
-    max-width: 150px;
-    border-radius: 50%;
-}
-
-#skills ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#skills li {
-    background-color: #f4f4f4;
-    margin: 5px 0;
+#display {
+    grid-column: span 4; /* Make display span all columns */
     padding: 10px;
+    font-size: 1.5rem;
+    text-align: right;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-}
-
-footer {
-    background-color: #007bff;
+button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    background-color: #007BFF;
     color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
